@@ -41,7 +41,10 @@ promoDiv.style.backgroundImage = 'url(img/bg.jpg)';
 
 // интерактивный список
 watchedList.innerHTML = '';
-movieDB.movies.sort().forEach((item, i) => watchedList.insertAdjacentHTML("beforeend", `<li class="promo__interactive-item">${i+1}. ${item}</li>`));
+movieDB.movies.sort().forEach((item, i) => watchedList.insertAdjacentHTML("beforeend", `
+    <li class="promo__interactive-item">${i+1}. ${item}
+        <div class="delete"></div>
+    </li>`));
 
 
 

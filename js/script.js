@@ -35,7 +35,8 @@ const movieDB = {
     ],
     updateMovies: function() {
         watchedList.innerHTML = '';
-        this.movies.map((item) => item.toUpperCase()).sort().forEach((item, i) => watchedList.insertAdjacentHTML("beforeend", `
+        this.movies = this.movies.map((item) => item.toUpperCase()).sort();
+        this.movies.forEach((item, i) => watchedList.insertAdjacentHTML("beforeend", `
             <li class="promo__interactive-item">${i+1}. ${item}
                 <div class="delete"></div>
             </li>`));
